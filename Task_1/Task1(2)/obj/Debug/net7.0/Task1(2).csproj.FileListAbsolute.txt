@@ -1,0 +1,15 @@
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\Task1(2).csproj.AssemblyReference.cache
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\Task1(2).GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\Task1(2).AssemblyInfoInputs.cache
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\Task1(2).AssemblyInfo.cs
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\Task1(2).csproj.CoreCompileInputs.cache
+D:\C#\Работа\Task_1\Task1(2)\bin\Debug\net7.0\Task1(2).exe
+D:\C#\Работа\Task_1\Task1(2)\bin\Debug\net7.0\Task1(2).deps.json
+D:\C#\Работа\Task_1\Task1(2)\bin\Debug\net7.0\Task1(2).runtimeconfig.json
+D:\C#\Работа\Task_1\Task1(2)\bin\Debug\net7.0\Task1(2).dll
+D:\C#\Работа\Task_1\Task1(2)\bin\Debug\net7.0\Task1(2).pdb
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\Task1(2).dll
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\refint\Task1(2).dll
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\Task1(2).pdb
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\Task1(2).genruntimeconfig.cache
+D:\C#\Работа\Task_1\Task1(2)\obj\Debug\net7.0\ref\Task1(2).dll
