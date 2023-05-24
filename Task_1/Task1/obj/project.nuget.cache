@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rFywhWDCVc+3oeeY+ug+79iS1O6Ztd2zNNS6c7HP0W3W067qLPxRBDG16m/2KNojhAupEjC+STvqvDLFGgiQSw==",
+  "dgSpecHash": "0dAQX7Di34KrYmEcUurM7ZGwL2aecbMZBo2ddLXohTrAKSYYeIZGvU5V7lA5+MubZ3xCoG81jebamqnL2yguwg==",
   "success": true,
-  "projectFilePath": "D:\\C#\\Работа\\Task_1\\Task1\\Task1.csproj",
+  "projectFilePath": "D:\\test\\Banking_application\\Task_1\\Task1\\Task1.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

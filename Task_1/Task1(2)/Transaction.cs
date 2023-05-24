@@ -11,5 +11,6 @@ namespace Task1_2_
         public decimal Amount { get; set; }
         public DateTime Date { get; set; }
         public string TransactionType { get; set; }
+
     }
 }

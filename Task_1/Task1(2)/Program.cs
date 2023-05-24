@@ -20,8 +20,8 @@
             transaction.Amount = 1000;
             transaction.Date = DateTime.Now;
             transaction.TransactionType = "Withdraw";
-            transactionLogger.LogTransaction(transaction);
 
+            transactionLogger.LogTransaction(transaction);
 
         }
     }
