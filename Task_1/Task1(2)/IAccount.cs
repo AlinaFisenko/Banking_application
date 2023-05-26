@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task1_2_
 {
-    public interface ITransactionLogger
+    public interface IAccount
     {
-        void Log(Transaction transaction);
+        public void Withdraw(decimal amount);
+        public void Deposit(decimal amount);
     }
 }

@@ -4,24 +4,27 @@
     {
         static void Main(string[] args)
         {
-            
-            ILogger logger = new ConsoleLogger();
-            AccountLogger accountLogger = new AccountLogger(logger);
 
-            Account account = new Account();
-            account.Deposit(2000, accountLogger);
-            account.Withdraw(1000, accountLogger);
-            account.Withdraw(1500, accountLogger);
-            account.Deposit(-2000, accountLogger);
+            ILogger consoleLogger  = new ConsoleLogger();
 
-            TransactionLogger transactionLogger = new TransactionLogger(logger);
+            List<Account> accounts = new List<Account>
+            {
+                new Account(),
+                new Account("1", 100M, "Alina Fisenko"),
+                new Account("2", 5M, "Ivan Ivanenko",consoleLogger )
+            };
 
-            Transaction transaction = new Transaction();
-            transaction.Amount = 1000;
-            transaction.Date = DateTime.Now;
-            transaction.TransactionType = "Withdraw";
+            //foreach( Account account in accounts )
+            //{
+            //    Console.WriteLine( account );
+            //}
 
-            transactionLogger.LogTransaction(transaction);
+            accounts[2].Withdraw(10M);
+            accounts[2].Deposit(10M);
+            accounts[2].ShowAllTransactions();
+
+
+
 
         }
     }
