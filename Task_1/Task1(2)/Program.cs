@@ -24,8 +24,6 @@
             accounts[2].ShowAllTransactions();
 
 
-
-
         }
     }
 }
