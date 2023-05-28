@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task1_2_
 {
-     public interface ILogger
+    public interface ITransaction
     {
-        public void Log(string message);
-        public void LogWarning(string message);
+        public void Display();
+    
     }
 }

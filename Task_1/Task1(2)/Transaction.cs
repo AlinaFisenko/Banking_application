@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task1_2_
 {
-    public class Transaction
+    public class Transaction: ITransaction
     {
         private decimal Amount { get; set; }
         private DateTime Date { get; set; }
@@ -22,6 +22,11 @@ namespace Task1_2_
         public override string ToString()
         {
             return $"TransactionType: {TransactionType}  amount: {Amount} date: {Date}\n";
+        }
+
+        public void Display()
+        {
+           Console.WriteLine($"TransactionType: {TransactionType}  amount: {Amount} date: {Date}\n");
         }
     }
 }

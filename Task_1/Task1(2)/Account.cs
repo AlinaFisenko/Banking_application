@@ -9,7 +9,7 @@ namespace Task1_2_
 {
     public class Account : IAccount
     {
-        private readonly string AccountNumber;
+        public readonly string AccountNumber;
 
         private decimal balance;
         private decimal Balance
@@ -28,7 +28,7 @@ namespace Task1_2_
 
         private readonly ILogger logger;
 
-        private List<Transaction> transactions;
+        private List<ITransaction> transactions;
 
         public Account()
         {
@@ -36,16 +36,14 @@ namespace Task1_2_
             Balance = 0;
             Owner = "not_set";
             logger = new ConsoleLogger();
-            transactions = new List<Transaction>();
+            transactions = new List<ITransaction>();
         }
 
-        public Account(string accountNumber, decimal balance, string owner)
+        public Account(string accountNumber, decimal balance, string owner):this()
         {
             AccountNumber = accountNumber;
             Balance = balance;
             Owner = owner;
-            logger = new ConsoleLogger();
-            transactions = new List<Transaction>();
         }
 
         public Account(string accountNumber, decimal balance, string owner, ILogger logger) : this(accountNumber, balance, owner)
@@ -57,14 +55,13 @@ namespace Task1_2_
         {
             if (amount < 0 || AccountNumber.Equals("not_set"))
             {
-                logger.Log("Invalid amount value or account number\n");
+                logger.LogWarning("Invalid amount value or account number\n");
                 return;
             }
 
             transactions.Add(new Transaction(amount, "Deposit"));
             Balance += amount;
-            logger.Log($"Deposited account number: {AccountNumber} balance: {Balance} owner: {Owner}\n");
-            ToString();
+            logger.Log($"Deposited account number: {AccountNumber} balance: {Balance} owner: {Owner}\n");         
         }
 
         public void Withdraw(decimal amount)
@@ -72,15 +69,13 @@ namespace Task1_2_
 
             if (amount > Balance || AccountNumber.Equals("not_set"))
             {
-                logger.Log("Insufficient balance or invalid account number\n");
+                logger.LogWarning("Insufficient balance or invalid account number\n");
                 return;
             }
 
             transactions.Add(new Transaction(amount, "Withdraw"));
             Balance -= amount;
             logger.Log($"Withdrawed account number: {AccountNumber} balance: {Balance} owner: {Owner}\n");
-            ToString();
-
         }
 
 
@@ -92,12 +87,14 @@ namespace Task1_2_
 
         public void ShowAllTransactions()
         {
-            Console.WriteLine("\n\nTransaction history\n");
-            foreach (var item in transactions)
-            {
-                logger.Log(item.ToString());
-                item.ToString();
-            }
+            logger.Log("\n\nTransaction history\n");
+
+            transactions.ForEach(item => logger.Log(item.ToString()));
+
+            //foreach (var item in transactions)
+            //{
+            //    logger.Log(item.ToString());
+            //}
         }
     }
 }

@@ -5,24 +5,23 @@
         static void Main(string[] args)
         {
 
-            ILogger consoleLogger  = new ConsoleLogger();
+            ILogger consoleLogger = new ConsoleLogger();
 
-            List<Account> accounts = new List<Account>
-            {
-                new Account(),
-                new Account("1", 100M, "Alina Fisenko"),
-                new Account("2", 5M, "Ivan Ivanenko",consoleLogger )
-            };
+            Dictionary<string, Account> accounts = new Dictionary<string, Account>();
 
-            //foreach( Account account in accounts )
-            //{
-            //    Console.WriteLine( account );
-            //}
 
-            accounts[2].Withdraw(10M);
-            accounts[2].Deposit(10M);
-            accounts[2].ShowAllTransactions();
+            Account account1 = new Account();
+            Account account2 = new Account("number2", 100m, "Alina Fisenko");
+            Account account3 = new Account("number3", 200m, "Ivan Ivanenko");
 
+            accounts.Add(account1.AccountNumber, account1);
+            accounts.Add(account2.AccountNumber, account2);
+            accounts.Add(account3.AccountNumber, account3);
+
+            accounts["not_set"].Withdraw(100m);
+            accounts["number2"].Deposit(100m);
+            accounts["number2"].Withdraw(300m);
+            accounts["number2"].ShowAllTransactions();
 
 
 

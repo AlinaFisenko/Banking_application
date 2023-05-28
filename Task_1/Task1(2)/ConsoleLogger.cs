@@ -12,5 +12,10 @@ namespace Task1_2_
         {
             Console.WriteLine(message);
         }
+
+        public void LogWarning(string message)
+        {
+            Console.WriteLine("Error: " + message);
+        }
     }
 }
